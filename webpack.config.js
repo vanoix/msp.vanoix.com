@@ -59,6 +59,7 @@ Encore
     .enablePostCssLoader(options => {
         options.plugins = [
             require('tailwindcss')('./tailwind.config.js'),
+            require('@tailwindcss/ui'),
             require('autoprefixer'),
         ];
         if (Encore.isProduction()) {
