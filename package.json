@@ -4,6 +4,7 @@
     "@tailwindcss/ui": "^0.5.0",
     "autoprefixer": "^9.8.6",
     "core-js": "^3.0.0",
+    "mailgo": "^0.9.14",
     "npx": "^10.2.2",
     "postcss-loader": "^3.0.0",
     "regenerator-runtime": "^0.13.2",

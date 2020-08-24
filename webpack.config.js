@@ -48,8 +48,6 @@ Encore
     .cleanupOutputBeforeBuild()
     .enableBuildNotifications()
     .enableSourceMaps(!Encore.isProduction())
-    // enables hashed filenames (e.g. app.abc123.css)
-    .enableVersioning(Encore.isProduction())
 
     // enables @babel/preset-env polyfills
     .configureBabelPresetEnv((config) => {
@@ -65,9 +63,6 @@ Encore
             require('tailwindcss')('./assets/tailwind.config.js'),
             require('autoprefixer'),
         ];
-        if (Encore.isProduction()) {
-            options.plugins.push(purgecss);
-        }
     })
 
     // uncomment if you use TypeScript

@@ -1,5 +1,2 @@
-
-
 import '../css/app.css';
-
-console.log('Hello webpack');
+require('mailgo/dist/mailgo.min.js');
