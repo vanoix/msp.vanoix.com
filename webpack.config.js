@@ -13,6 +13,10 @@ Encore
     .setPublicPath('/build')
     // only needed for CDN's or sub-directory deploy
     //.setManifestKeyPrefix('build/')
+    .copyFiles({
+      from: './assets/images',
+      to: 'images/[path][name].[ext]',
+    })
 
     /*
      * ENTRY CONFIG
@@ -58,8 +62,7 @@ Encore
 
     .enablePostCssLoader(options => {
         options.plugins = [
-            require('tailwindcss')('./tailwind.config.js'),
-            require('@tailwindcss/ui'),
+            require('tailwindcss')('./assets/tailwind.config.js'),
             require('autoprefixer'),
         ];
         if (Encore.isProduction()) {
